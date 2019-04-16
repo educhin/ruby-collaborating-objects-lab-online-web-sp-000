@@ -7,11 +7,9 @@ class MP3Importer
   end
 
   def files
-    Dir.entries("*.mp3")
-
-    # .entries(@path)
-    # files.collect{|file| file.include?(".mp3")}
-    # files.uniq
+    Dir.entries(@path)
+    files.collect{|file| file.include?(".mp3")}
+    files.uniq
   end
 
   def import(file)
