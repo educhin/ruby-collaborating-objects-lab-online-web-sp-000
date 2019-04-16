@@ -11,4 +11,8 @@ class Song
 
       song
   end
+
+  def name
+    @title
+  end
 end
