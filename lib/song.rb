@@ -10,7 +10,7 @@ class Song
     name = data[1].split(".")[0]
     song = Song.new(name)
 
-    song.artist = .find_or_create_by_name(data[0])
+    song.artist = Artist.find_or_create_by_name(data[0])
     song
   end
 
