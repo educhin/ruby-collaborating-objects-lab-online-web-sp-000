@@ -15,4 +15,8 @@ class Song
   def name
     @title
   end
+
+  def name=(name)
+    @title = name
+  end
 end
