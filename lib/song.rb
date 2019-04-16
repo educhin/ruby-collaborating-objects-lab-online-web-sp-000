@@ -4,12 +4,13 @@ class Song
     @title = title
   end
 
-  def self.new_from_filename(file)
-    data = file.split(" - ")
-    name = data[1].split(".")[0]
-    song = self.new_by_name(name)
+  def self.new_from_filename(files)
+    files.collect do |file|
+      data = file.split(" - ")
+      name = data[1].split(".")[0]
+      song = Song.new(name)
 
-    song.artist_name = data[0]
-    song
+      song
+    end
   end
 end
