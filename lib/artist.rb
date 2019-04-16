@@ -36,8 +36,9 @@ class Artist
     artist = @@all.detect{|artist| artist.name == name}
 
     if artist == nil
-      Artist.new(name)
-      @@all << self
+      artist = Artist.new(name)
+      @@all << artist
+      artist
     else
       artist
     end
