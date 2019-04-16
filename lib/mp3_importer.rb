@@ -11,7 +11,7 @@ class MP3Importer
     files.select{|file| file.include?(".mp3")}
   end
 
-  def import(file)
-    Song.new_from_filename(file)
+  def import
+    Song.new_from_filename(self.files)
   end
 end
