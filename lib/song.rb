@@ -4,7 +4,7 @@ class Song
     @title = title
   end
 
-  def self.new_from_filename(files)
+  def self.new_by_filename(files)
     files.collect do |file|
       data = file.split(" - ")
       name = data[1].split(".")[0]
